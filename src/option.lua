@@ -49,7 +49,7 @@ end
 
 function option.expect(optionObj)
     if option.isNone(optionObj) then
-        error("Called custodian.option.expectThen() on custodian.option.none!")
+        error("Called custodian.option.expect() on custodian.option.none!")
     end
 end
 
