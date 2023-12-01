@@ -1,7 +1,7 @@
 [package]
-name = "steviegoodman/library-nmae"
-description = "No description provided."
-version = "1.0.0"
+name = "steviegoodman/custodian"
+description = "Simple Option and Result types."
+version = "0.1.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 

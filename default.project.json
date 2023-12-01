@@ -1,5 +1,5 @@
 {
-    "name": "LibraryName",
+    "name": "Custodian",
 
     "tree": {
         "$className": "DataModel",
@@ -10,8 +10,8 @@
             "Modules": {
                 "$className": "Folder",
 
-                "LibraryName": {
-                    "$path": "src/LibraryName.luau"
+                "Custodian": {
+                    "$path": "src"
                 }
             }
         }
