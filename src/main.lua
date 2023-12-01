@@ -1,5 +1,3 @@
-local custodian = {}
+local option = require(script.option)
 
-
-
-return custodian
+return option
