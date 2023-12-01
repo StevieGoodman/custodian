@@ -1,28 +1,12 @@
-# Roblox Library Template
-This repository is used to quickly set up a Roblox development environment suited for creating Roblox libraries.
+# Custodian
+Custodian is a simple Lua implementation of Option and Result types available in other languages' standard libraries, such as Rust.
+It uses a functional programming paradigm for simplicity and explicitness.
+The `Option<T>` type can be used to represent an optional value without making assumptions about whether the value is `nil`.
+The `Result<T, E>` type can be used to improve the ergonomics of error handling in your application by incorporating success/failure and returned value in a single variable.
 
-## Toolchain
-This project makes use of:
-- Wally (package manager)
-- Rojo (Studio-to-filesystem server)
-- Moonwave (documentation)
+## Setup (Roblox)
+1. Set up a Wally project.
+2. Add Custodian as a dependency in your `Wally.toml` file.
+3. Run `wally install`.
 
-## Packages
-- Oxide (my own Rust types library)
-
-## Setup
-1. Clone project
-2. Install Rust
-3. Run `cargo install foreman`
-4. Add tools to `foreman.toml`:
-  - `rojo = { github = "rojo-rbx/rojo", version = "7.0.0" }`
-5. Run `foreman install`
-6. Ensure that Foreman `bin` directory is in PATH.
-7. Install VS Code plugins:
-  - Roblox LSP
-  - Rojo - Roblox Studio Sync
-8. Open in Roblox Studio
-9. Open project in VS Code
-10. Run `rojo serve`
-
-🎉 Congratulations! You've set up the project.
+🎉 Congratulations! You've installed Custodian.
