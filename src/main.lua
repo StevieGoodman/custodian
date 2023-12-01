@@ -1,5 +1,3 @@
-local custodian = {}
+local result = require(script.result)
 
-
-
-return custodian
+return result
