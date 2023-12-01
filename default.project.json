@@ -2,18 +2,6 @@
     "name": "Custodian",
 
     "tree": {
-        "$className": "DataModel",
-
-        "ReplicatedStorage": {
-            "$className": "ReplicatedStorage",
-
-            "Modules": {
-                "$className": "Folder",
-
-                "Custodian": {
-                    "$path": "src"
-                }
-            }
-        }
+        "$path": "src"
     }
 }
