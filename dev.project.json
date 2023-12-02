@@ -1,0 +1,21 @@
+{
+    "name": "Custodian",
+
+    "tree": {
+        "$className": "DataModel",
+        
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "DevPackages": {
+                "$path": "DevPackages"
+            }
+        },
+
+        "ServerScriptService": {
+            "$className": "ServerScriptService",
+            "Custodian": {
+                "$path": "src"
+            }
+        }
+    }
+}
