@@ -1,7 +1,6 @@
 local Result = require(script.Parent.result)
 
 return function()
-    FOCUS()
     local okResult = Result.ok("ok")
     local errResult = Result.err("err")
 
