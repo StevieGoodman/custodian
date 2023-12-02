@@ -3,11 +3,11 @@
 registry = "test"
 
 [[package]]
-name = "steviegoodman/custodian"
-version = "1.0.1"
+name = "roblox/testez"
+version = "0.4.1"
 dependencies = []
 
 [[package]]
-name = "steviegoodman/cutodian"
-version = "1.0.1"
-dependencies = [["custodian", "steviegoodman/custodian@1.0.1"]]
+name = "steviegoodman/custodian"
+version = "1.0.2"
+dependencies = [["TestEZ", "roblox/testez@0.4.1"]]

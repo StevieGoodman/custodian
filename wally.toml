@@ -7,4 +7,5 @@ realm = "shared"
 exclude = ["**"]
 include = ["src", "src/*", "default.project.json", "wally.toml"]
 
-[dependencies]
+[dev-dependencies]
+TestEZ = "roblox/testez@0.4.1"

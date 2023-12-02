@@ -54,30 +54,37 @@ function result.switchThen(resultObj, switchTable, ...)
 end
 
 function result.switchThenCall(resultObj, switchTable, ...)
-    result.isOkThenCall(resultObj, switchTable.ok, ...)
-    result.isErrThenCall(resultObj, switchTable.err, ...)
+    local value = nil
+    value = result.isOkThenCall(resultObj, switchTable.ok, ...)
+    if value then
+        return value
+    end
+    value = result.isErrThenCall(resultObj, switchTable.err, ...)
+    return value
 end
 
 function result.expectOk(resultObj)
     if result.isErr(resultObj) then
         error("Called custodian.result.expectOk() on custodian.result.err!")
     end
+    return resultObj.ok
 end
 
 function result.expectErr(resultObj)
-    if result.isErr(resultObj) then
-        error("Called custodian.option.expectErr() on custodian.result.ok!")
+    if result.isOk(resultObj) then
+        error("Called custodian.result.expectErr() on custodian.result.ok!")
     end
+    return resultObj.err
 end
 
 function result.expectOkThen(resultObj, callback, ...)
     result.expectOk(resultObj)
-    return callback(resultObj.value, ...)
+    return callback(resultObj.ok, ...)
 end
 
 function result.expectErrThen(resultObj, callback, ...)
     result.expectErr(resultObj)
-    return callback(resultObj.value, ...)
+    return callback(resultObj.err, ...)
 end
 
 return result
