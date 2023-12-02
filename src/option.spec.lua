@@ -1,5 +1,3 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
 local Option = require(script.Parent.option)
 
 return function()
@@ -64,7 +62,7 @@ return function()
         end)
         it("should pass in extra arguments into the passed callback", function()
             local string = "no value"
-            Option.isSomeThen(someOption, function(val, arg1, arg2, arg3)
+            Option.isSomeThen(someOption, function(_, arg1, arg2, arg3)
                 string = `{tostring(arg1)} {arg2} {tostring(arg3)}`
             end, 1, "hello", true)
             expect(string).to.be.equal("1 hello true")
