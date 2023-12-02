@@ -43,14 +43,21 @@ function option.switch(optionObj, switchTable)
 end
 
 function option.switchThenCall(optionObj, switchTable, ...)
-    option.isSomeThenCall(optionObj, switchTable.some, ...)
-    option.isNoneThenCall(optionObj, switchTable.none, ...)
+    local result = nil
+    result = option.isSomeThenCall(optionObj, switchTable.some, ...)
+    -- Prevents isNoneThenCall from overwriting non-nil result
+    if result then
+        return result
+    end
+    result = option.isNoneThenCall(optionObj, switchTable.none, ...)
+    return result
 end
 
 function option.expect(optionObj)
     if option.isNone(optionObj) then
         error("Called custodian.option.expect() on custodian.option.none!")
     end
+    return optionObj.value
 end
 
 function option.expectThen(optionObj, callback, ...)
